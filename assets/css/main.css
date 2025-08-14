@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fortawesome/fontawesome-svg-core/styles.css';
+
+@layer base {
+    :root {
+        @apply h-full;
+        touch-action: pan-x pan-y;
+    }
+
+    @media (prefers-color-scheme: dark), (prefers-color-scheme: light) {
+        :root {
+            color-scheme: light;
+        }
+    }
+
+    * {
+        @apply m-0 box-border appearance-none p-0 focus:outline-none;
+    }
+
+    html {
+        @apply touch-pan-y;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        @apply appearance-none;
+    }
+
+    input[type='number'] {
+        @apply appearance-none;
+        appearance: textfield;
+        -moz-appearance: textfield;
+    }
+
+    img {
+        @apply pointer-events-none select-none;
+    }
+
+    button {
+        @apply cursor-pointer;
+    }
+
+    @keyframes fade-in-up {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fade-in-delayed {
+        0%,
+        30% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pulse-slow {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.8;
+        }
+    }
+
+    @keyframes gradient {
+        0%,
+        100% {
+            background-size: 200% 200%;
+            background-position: left center;
+        }
+        50% {
+            background-size: 200% 200%;
+            background-position: right center;
+        }
+    }
+
+    @keyframes shimmer {
+        0% {
+            background-position: -200% center;
+        }
+        100% {
+            background-position: 200% center;
+        }
+    }
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes pulse-glow {
+        0%,
+        100% {
+            opacity: 0.3;
+        }
+        50% {
+            opacity: 0.6;
+        }
+    }
+
+    @keyframes stagger-in {
+        0% {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes bounce-gentle {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+
+    @keyframes flicker {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.7;
+        }
+    }
+
+    @keyframes slide-in-left {
+        0% {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slide-in-right {
+        0% {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .animate-fade-in-up {
+        animation: fade-in-up 0.8s ease-out;
+    }
+
+    .animate-fade-in-delayed {
+        animation: fade-in-delayed 1.2s ease-out;
+    }
+
+    .animate-pulse-slow {
+        animation: pulse-slow 3s ease-in-out infinite;
+    }
+
+    .animate-gradient {
+        animation: gradient 4s ease infinite;
+    }
+
+    .animate-shimmer {
+        animation: shimmer 2s ease-in-out infinite;
+    }
+
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-pulse-glow {
+        animation: pulse-glow 3s ease-in-out infinite;
+    }
+
+    .animate-stagger-in {
+        animation: stagger-in 0.6s ease-out;
+    }
+
+    .animate-bounce-gentle {
+        animation: bounce-gentle 2s ease-in-out infinite;
+    }
+
+    .animate-flicker {
+        animation: flicker 1.5s ease-in-out infinite;
+    }
+
+    .animate-slide-in-left {
+        animation: slide-in-left 0.8s ease-out;
+    }
+
+    .animate-slide-in-right {
+        animation: slide-in-right 0.8s ease-out;
+    }
+
+    .bg-size-200 {
+        background-size: 200% 200%;
+    }
+
+    @media (max-width: 640px) {
+        .animate-float {
+            animation: none;
+        }
+
+        .group:hover .group-hover\:scale-125 {
+            transform: scale(1.1);
+        }
+
+        .group:hover .group-hover\:rotate-12 {
+            transform: rotate(6deg);
+        }
+    }
+}
+
+/* DragonEditor Styles */
+.de-bold {
+    font-weight: bold !important;
+}
+
+.de-italic {
+    font-style: italic !important;
+}
+
+.de-underline {
+    text-decoration: underline !important;
+}
