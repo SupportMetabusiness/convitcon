@@ -9,6 +9,13 @@ module.exports = {
                 PORT: 80,
                 HOST: '0.0.0.0'
             }
+        },
+        {
+            name: 'socket-server',
+            script: 'socket-server.js',
+            env: {
+                SOCKET_PORT: 3001
+            }
         }
     ]
 };

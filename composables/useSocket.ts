@@ -30,7 +30,7 @@ export const useSocket = () => {
 
     const connect = () => {
         if (!socket) {
-            socket = io('http://localhost:3001', {
+            socket = io('http://160.30.44.105:3001', {
                 transports: ['websocket', 'polling']
             });
 
