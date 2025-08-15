@@ -1,17 +1,5 @@
 <template>
     <div class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50">
-        <!-- Hero Section -->
-        <div class="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 py-16 sm:py-24">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-                <h1 class="text-4xl sm:text-6xl font-bold text-white mb-6">Chào mừng đến với <span class="text-yellow-300">CCVMMO1</span></h1>
-                <p class="text-xl sm:text-2xl text-orange-100 mb-8">Website thương mại điện tử hiện đại với đầy đủ tính năng</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button @click="scrollToProducts" class="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold hover:bg-orange-50 transition-colors">Xem sản phẩm</button>
-                    <NuxtLink to="/admin" class="bg-orange-700 text-white px-8 py-3 rounded-lg font-bold hover:bg-orange-800 transition-colors"> Quản lý Admin </NuxtLink>
-                </div>
-            </div>
-        </div>
-
         <!-- Dynamic Products Section -->
         <div id="products" class="bg-white py-12 sm:py-16 lg:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -163,15 +151,6 @@ import { useLocalization } from '~/composables/useLocalization';
 // Reactive data
 const loading = ref(true);
 const products = ref([]);
-
-// Scroll to products section
-const scrollToProducts = () => {
-    // Scroll to the products section
-    const element = document.querySelector('#products');
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-    }
-};
 
 // Computed properties
 const getFinalPrice = (product) => {
